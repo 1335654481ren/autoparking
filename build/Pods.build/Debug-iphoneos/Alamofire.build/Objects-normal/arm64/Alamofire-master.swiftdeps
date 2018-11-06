@@ -1,0 +1,21 @@
+version: "Apple Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1)"
+options: "1438b6a6d6ae96736d2280f4fe00877a"
+build_time: [1539440850, 680130000]
+inputs:
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/AFError.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Alamofire.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/MultipartFormData.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Notifications.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/ParameterEncoding.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Request.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Response.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/ResponseSerialization.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Result.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/ServerTrustPolicy.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/SessionDelegate.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/SessionManager.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/TaskDelegate.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Timeline.swift": [1538581193, 0]
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Alamofire/Source/Validation.swift": [1538581193, 0]

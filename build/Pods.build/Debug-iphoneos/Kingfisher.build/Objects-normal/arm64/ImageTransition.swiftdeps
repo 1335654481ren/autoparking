@@ -1,0 +1,165 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ImageTransition"
+provides-nominal:
+- "10Kingfisher15ImageTransitionO"
+provides-member:
+- ["10Kingfisher15ImageTransitionO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Array"
+- !private "AssignmentPrecedence"
+- "Bool"
+- !private "FloatLiteralType"
+- "ImageTransition"
+- !private "IntegerLiteralType"
+- "TimeInterval"
+- "UIImage"
+- "UIImageView"
+- "UIViewAnimationOptions"
+- "Void"
+depends-member:
+- !private ["So22UIViewAnimationOptionsV", "transitionCrossDissolve"]
+- !private ["So22UIViewAnimationOptionsV", "transitionFlipFromBottom"]
+- !private ["So22UIViewAnimationOptionsV", "transitionFlipFromLeft"]
+- !private ["So22UIViewAnimationOptionsV", "transitionFlipFromRight"]
+- !private ["So22UIViewAnimationOptionsV", "transitionFlipFromTop"]
+- !private ["So15CALayerDelegateP", "image"]
+- !private ["s7CVarArgP", "image"]
+- !private ["s28CustomDebugStringConvertibleP", "image"]
+- !private ["s23CustomStringConvertibleP", "image"]
+- !private ["SQ", "image"]
+- !private ["SQ", "transitionCrossDissolve"]
+- !private ["SQ", "transitionFlipFromBottom"]
+- !private ["SQ", "transitionFlipFromLeft"]
+- !private ["SQ", "transitionFlipFromRight"]
+- !private ["SQ", "transitionFlipFromTop"]
+- !private ["s25ExpressibleByArrayLiteralP", "transitionCrossDissolve"]
+- !private ["s25ExpressibleByArrayLiteralP", "transitionFlipFromBottom"]
+- !private ["s25ExpressibleByArrayLiteralP", "transitionFlipFromLeft"]
+- !private ["s25ExpressibleByArrayLiteralP", "transitionFlipFromRight"]
+- !private ["s25ExpressibleByArrayLiteralP", "transitionFlipFromTop"]
+- !private ["SH", "image"]
+- ["10Kingfisher15ImageTransitionO", "Bool"]
+- ["10Kingfisher15ImageTransitionO", "TimeInterval"]
+- ["10Kingfisher15ImageTransitionO", "UIImage"]
+- ["10Kingfisher15ImageTransitionO", "UIImageView"]
+- ["10Kingfisher15ImageTransitionO", "UIViewAnimationOptions"]
+- ["10Kingfisher15ImageTransitionO", "Void"]
+- ["10Kingfisher15ImageTransitionO", "animationOptions"]
+- ["10Kingfisher15ImageTransitionO", "animations"]
+- ["10Kingfisher15ImageTransitionO", "completion"]
+- ["10Kingfisher15ImageTransitionO", "custom"]
+- ["10Kingfisher15ImageTransitionO", "duration"]
+- ["10Kingfisher15ImageTransitionO", "fade"]
+- ["10Kingfisher15ImageTransitionO", "flipFromBottom"]
+- ["10Kingfisher15ImageTransitionO", "flipFromLeft"]
+- ["10Kingfisher15ImageTransitionO", "flipFromRight"]
+- ["10Kingfisher15ImageTransitionO", "flipFromTop"]
+- ["10Kingfisher15ImageTransitionO", "none"]
+- !private ["10Kingfisher0A10CompatibleP", "image"]
+- !private ["So8NSCodingP", "image"]
+- !private ["So8NSObjectC", "image"]
+- !private ["So8NSObjectP", "image"]
+- !private ["s9OptionSetP", "transitionCrossDissolve"]
+- !private ["s9OptionSetP", "transitionFlipFromBottom"]
+- !private ["s9OptionSetP", "transitionFlipFromLeft"]
+- !private ["s9OptionSetP", "transitionFlipFromRight"]
+- !private ["s9OptionSetP", "transitionFlipFromTop"]
+- !private ["SY", "transitionCrossDissolve"]
+- !private ["SY", "transitionFlipFromBottom"]
+- !private ["SY", "transitionFlipFromLeft"]
+- !private ["SY", "transitionFlipFromRight"]
+- !private ["SY", "transitionFlipFromTop"]
+- !private ["s10SetAlgebraP", "transitionCrossDissolve"]
+- !private ["s10SetAlgebraP", "transitionFlipFromBottom"]
+- !private ["s10SetAlgebraP", "transitionFlipFromLeft"]
+- !private ["s10SetAlgebraP", "transitionFlipFromRight"]
+- !private ["s10SetAlgebraP", "transitionFlipFromTop"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
+- !private ["So29UIAccessibilityIdentificationP", "image"]
+- !private ["So12UIAppearanceP", "image"]
+- !private ["So21UIAppearanceContainerP", "image"]
+- !private ["So17UICoordinateSpaceP", "image"]
+- !private ["So13UIDynamicItemP", "image"]
+- !private ["So18UIFocusEnvironmentP", "image"]
+- !private ["So11UIFocusItemP", "image"]
+- !private ["So20UIFocusItemContainerP", "image"]
+- !private ["So11UIImageViewC", "image"]
+- !private ["So30UIPasteConfigurationSupportingP", "image"]
+- !private ["So11UIResponderC", "image"]
+- !private ["So30UIResponderStandardEditActionsP", "image"]
+- !private ["So18UITraitEnvironmentP", "image"]
+- !private ["So23UIUserActivityRestoringP", "image"]
+- !private ["So6UIViewC", "image"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "image"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
+depends-nominal:
+- !private "So22UIViewAnimationOptionsV"
+- !private "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "SH"
+- "10Kingfisher15ImageTransitionO"
+- !private "10Kingfisher0A10CompatibleP"
+- !private "So8NSCodingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "s9OptionSetP"
+- !private "SY"
+- !private "s10SetAlgebraP"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So11UIImageViewC"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/os.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h"
+- "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Kingfisher/Sources/Kingfisher.h"
+- "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/build/Pods.build/Debug-iphoneos/Kingfisher.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "ce990fa9a5a317b40d52122df299fa5b"

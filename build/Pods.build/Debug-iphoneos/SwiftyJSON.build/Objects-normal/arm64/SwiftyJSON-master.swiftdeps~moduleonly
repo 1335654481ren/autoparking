@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1)"
+options: "bf6c4e623b2cf0da37606e2bfc3cabaf"
+build_time: [1539440900, 367804000]
+inputs:
+  "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [1538581193, 0]

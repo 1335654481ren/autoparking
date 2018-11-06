@@ -1,0 +1,1325 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ImageSource"
+- "ImageFormat"
+- "DataProxy"
+- "CGSizeProxy"
+provides-nominal:
+- "10Kingfisher11ImageSourceC"
+- "10Kingfisher11ImageFormatO"
+- "10Kingfisher9DataProxyV"
+- "10Foundation4DataV"
+- "10Kingfisher11CGSizeProxyV"
+- "So6CGSizeV"
+provides-member:
+- ["10KingfisherAAC", ""]
+- ["10Kingfisher11ImageSourceC", ""]
+- ["10Kingfisher11ImageFormatO", ""]
+- ["10Kingfisher9DataProxyV", ""]
+- ["10Foundation4DataV", ""]
+- ["10Kingfisher11CGSizeProxyV", ""]
+- ["So6CGSizeV", ""]
+- ["So6CGRectV", ""]
+- ["SL", ""]
+- ["Sf", ""]
+- ["10Kingfisher10RectCornerV", ""]
+- ["So7UIImageC", ""]
+- ["10KingfisherAAC", "animatedImageData"]
+- ["10KingfisherAAC", "cgImage"]
+- ["10KingfisherAAC", "scale"]
+- ["10KingfisherAAC", "images"]
+- ["10KingfisherAAC", "duration"]
+- ["10KingfisherAAC", "imageSource"]
+- ["10KingfisherAAC", "size"]
+- ["10KingfisherAAC", "image"]
+- ["10KingfisherAAC", "normalized"]
+- ["10KingfisherAAC", "animated"]
+- ["10KingfisherAAC", "pngRepresentation"]
+- ["10KingfisherAAC", "jpegRepresentation"]
+- ["10KingfisherAAC", "gifRepresentation"]
+- ["10KingfisherAAC", "animated"]
+- ["10KingfisherAAC", "image"]
+- ["10KingfisherAAC", "image"]
+- ["10KingfisherAAC", "resize"]
+- ["10KingfisherAAC", "resize"]
+- ["10KingfisherAAC", "resize"]
+- ["10KingfisherAAC", "crop"]
+- ["10KingfisherAAC", "blurred"]
+- ["10KingfisherAAC", "overlaying"]
+- ["10KingfisherAAC", "tinted"]
+- ["10KingfisherAAC", "adjusted"]
+- ["10KingfisherAAC", "decoded"]
+- ["10KingfisherAAC", "decoded"]
+- ["10Kingfisher9DataProxyV", "imageFormat"]
+- ["10Kingfisher11CGSizeProxyV", "constrained"]
+- ["10Kingfisher11CGSizeProxyV", "filling"]
+- ["10Kingfisher11CGSizeProxyV", "constrainedRect"]
+- ["So6CGRectV", "scaled"]
+- ["SL", "clamped"]
+- ["10KingfisherAAC", "beginContext"]
+- ["10KingfisherAAC", "endContext"]
+- ["10KingfisherAAC", "draw"]
+- ["Sf", "isEven"]
+- ["10Kingfisher10RectCornerV", "uiRectCorner"]
+- ["So7UIImageC", "kf_normalized"]
+- ["So7UIImageC", "kf_image"]
+- ["So7UIImageC", "kf_resize"]
+- ["So7UIImageC", "kf_blurred"]
+- ["So7UIImageC", "kf_overlaying"]
+- ["So7UIImageC", "kf_tinted"]
+- ["So7UIImageC", "kf_adjusted"]
+- ["10KingfisherAAC", "image"]
+provides-dynamic-lookup:
+- "kf_adjusted"
+- "kf_blurred"
+- "kf_image"
+- "kf_normalized"
+- "kf_overlaying"
+- "kf_resize"
+- "kf_tinted"
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "*"
+- !private "+"
+- !private "+="
+- !private "-"
+- !private "..."
+- !private "..<"
+- !private "/"
+- !private "<"
+- !private "<="
+- "=="
+- !private ">"
+- !private "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "CFData"
+- "CGContext"
+- "CGFloat"
+- "CGImage"
+- "CGImageSource"
+- !private "CGImageSourceCopyPropertiesAtIndex"
+- !private "CGImageSourceCreateImageAtIndex"
+- !private "CGImageSourceCreateWithData"
+- !private "CGImageSourceGetCount"
+- "CGPoint"
+- "CGRect"
+- "CGSize"
+- "CGSizeProxy"
+- "CastingPrecedence"
+- "ClosedRange"
+- "Color"
+- "Comparable"
+- "ContentMode"
+- "Data"
+- "DataProxy"
+- !private "Dictionary"
+- !private "Double"
+- "Float"
+- "FloatLiteralType"
+- "Image"
+- "ImageFormat"
+- !private "ImageHeaderData"
+- "ImageSource"
+- !private "Int"
+- "IntegerLiteralType"
+- "Kingfisher"
+- "KingfisherCompatible"
+- !private "NSData"
+- !private "NSDictionary"
+- !private "NSNumber"
+- "RectCorner"
+- !private "String"
+- !private "StringLiteralType"
+- "TernaryPrecedence"
+- "TimeInterval"
+- !private "UIBezierPath"
+- !private "UIGraphicsBeginImageContextWithOptions"
+- !private "UIGraphicsEndImageContext"
+- !private "UIGraphicsGetCurrentContext"
+- !private "UIGraphicsGetImageFromCurrentImageContext"
+- !private "UIImageJPEGRepresentation"
+- !private "UIImagePNGRepresentation"
+- "UIRectCorner"
+- !private "UIRectFill"
+- "UIViewContentMode"
+- !private "UInt32"
+- "UInt8"
+- "Void"
+- !private "animatedImageDataKey"
+- !private "assertionFailure"
+- !private "floor"
+- !private "imageSourceKey"
+- !private "kCGImagePropertyGIFDelayTime"
+- !private "kCGImagePropertyGIFDictionary"
+- !private "kCGImagePropertyGIFUnclampedDelayTime"
+- !private "kCGImageSourceShouldCache"
+- !private "kCGImageSourceTypeIdentifierHint"
+- !private "kUTTypeGIF"
+- !private "kvImageEdgeExtend"
+- !private "max"
+- !private "min"
+- !private "objc_getAssociatedObject"
+- !private "objc_setAssociatedObject"
+- !private "round"
+- !private "sqrt"
+- !private "vImageBoxConvolve_ARGB8888"
+- !private "vImagePixelCount"
+- !private "vImage_Buffer"
+- !private "vImage_Flags"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "first"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "append"]
+- !private ["s13ArrayProtocolP", "first"]
+- !private ["s13ArrayProtocolP", "init"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- ["SK", "CompatibleType"]
+- !private ["SK", "DataProxy"]
+- !private ["SK", "append"]
+- !private ["SK", "first"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- ["SK", "kf"]
+- !private ["SK", "lowerBound"]
+- !private ["SK", "subscript"]
+- !private ["SK", "upperBound"]
+- !private ["SB", "clamped"]
+- !private ["SB", "infinity"]
+- !private ["SB", "init"]
+- !private ["SB", "isEven"]
+- !private ["SB", "pi"]
+- !private ["SB", "truncatingRemainder"]
+- !private ["Sz", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So11CGBlendModeV", "destinationIn"]
+- !private ["So11CGBlendModeV", "sourceAtop"]
+- !private ["So12CGContextRefa", "addPath"]
+- !private ["So12CGContextRefa", "bytesPerRow"]
+- !private ["So12CGContextRefa", "clip"]
+- !private ["So12CGContextRefa", "data"]
+- !private ["So12CGContextRefa", "draw"]
+- !private ["So12CGContextRefa", "height"]
+- !private ["So12CGContextRefa", "makeImage"]
+- !private ["So12CGContextRefa", "scaleBy"]
+- !private ["So12CGContextRefa", "translateBy"]
+- !private ["So12CGContextRefa", "width"]
+- !private ["12CoreGraphics7CGFloatV", "clamped"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["So10CGImageRefa", "bytesPerRow"]
+- !private ["So10CGImageRefa", "cropping"]
+- !private ["So10CGImageRefa", "height"]
+- !private ["So10CGImageRefa", "width"]
+- !private ["So7CGPointV", "init"]
+- !private ["So7CGPointV", "x"]
+- !private ["So7CGPointV", "y"]
+- !private ["So7CGPointV", "zero"]
+- ["So6CGRectV", "CGFloat"]
+- ["So6CGRectV", "CGRect"]
+- !private ["So6CGRectV", "init"]
+- !private ["So6CGRectV", "intersection"]
+- !private ["So6CGRectV", "origin"]
+- ["So6CGRectV", "scaled"]
+- !private ["So6CGRectV", "size"]
+- ["So6CGSizeV", "CGSizeProxy"]
+- ["So6CGSizeV", "CompatibleType"]
+- ["So6CGSizeV", "deinit"]
+- !private ["So6CGSizeV", "height"]
+- !private ["So6CGSizeV", "init"]
+- ["So6CGSizeV", "kf"]
+- !private ["So6CGSizeV", "width"]
+- ["10Kingfisher11CGSizeProxyV", "CGFloat"]
+- ["10Kingfisher11CGSizeProxyV", "CGPoint"]
+- ["10Kingfisher11CGSizeProxyV", "CGRect"]
+- ["10Kingfisher11CGSizeProxyV", "CGSize"]
+- !private ["10Kingfisher11CGSizeProxyV", "aspectRatio"]
+- !private ["10Kingfisher11CGSizeProxyV", "base"]
+- ["10Kingfisher11CGSizeProxyV", "constrained"]
+- ["10Kingfisher11CGSizeProxyV", "constrainedRect"]
+- ["10Kingfisher11CGSizeProxyV", "filling"]
+- ["10Kingfisher11CGSizeProxyV", "init"]
+- !private ["10Kingfisher11CGSizeProxyV", "round"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "animatedImage"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "cgImage"]
+- !private ["s7CVarArgP", "cgPath"]
+- !private ["s7CVarArgP", "clamped"]
+- !private ["s7CVarArgP", "doubleValue"]
+- !private ["s7CVarArgP", "draw"]
+- !private ["s7CVarArgP", "duration"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "getBytes"]
+- !private ["s7CVarArgP", "imageOrientation"]
+- !private ["s7CVarArgP", "images"]
+- !private ["s7CVarArgP", "infinity"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEven"]
+- !private ["s7CVarArgP", "kf"]
+- !private ["s7CVarArgP", "pi"]
+- !private ["s7CVarArgP", "scale"]
+- !private ["s7CVarArgP", "set"]
+- !private ["s7CVarArgP", "size"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "truncatingRemainder"]
+- !private ["SN", "lowerBound"]
+- !private ["SN", "upperBound"]
+- ["Sl", "CompatibleType"]
+- !private ["Sl", "DataProxy"]
+- !private ["Sl", "append"]
+- !private ["Sl", "first"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- ["Sl", "kf"]
+- !private ["Sl", "lowerBound"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "upperBound"]
+- ["SL", "ClosedRange"]
+- ["SL", "Self"]
+- ["SL", "clamped"]
+- !private ["SL", "infinity"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "isEven"]
+- !private ["SL", "max"]
+- !private ["SL", "min"]
+- !private ["SL", "pi"]
+- !private ["SL", "truncatingRemainder"]
+- ["10Kingfisher11ContentModeO", "aspectFill"]
+- !private ["So17UIViewContentModeV", "aspectFill"]
+- ["10Kingfisher11ContentModeO", "aspectFit"]
+- !private ["So17UIViewContentModeV", "aspectFit"]
+- ["So17UIViewContentModeV", "scaleAspectFill"]
+- ["So17UIViewContentModeV", "scaleAspectFit"]
+- !private ["s28CustomDebugStringConvertibleP", "CGRect"]
+- !private ["s28CustomDebugStringConvertibleP", "CGSizeProxy"]
+- ["s28CustomDebugStringConvertibleP", "CompatibleType"]
+- !private ["s28CustomDebugStringConvertibleP", "DataProxy"]
+- !private ["s28CustomDebugStringConvertibleP", "animatedImage"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "cgImage"]
+- !private ["s28CustomDebugStringConvertibleP", "cgPath"]
+- !private ["s28CustomDebugStringConvertibleP", "doubleValue"]
+- !private ["s28CustomDebugStringConvertibleP", "draw"]
+- !private ["s28CustomDebugStringConvertibleP", "duration"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "flatMap"]
+- !private ["s28CustomDebugStringConvertibleP", "getBytes"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "imageOrientation"]
+- !private ["s28CustomDebugStringConvertibleP", "images"]
+- !private ["s28CustomDebugStringConvertibleP", "infinity"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "intersection"]
+- !private ["s28CustomDebugStringConvertibleP", "isEven"]
+- ["s28CustomDebugStringConvertibleP", "kf"]
+- !private ["s28CustomDebugStringConvertibleP", "lowerBound"]
+- !private ["s28CustomDebugStringConvertibleP", "origin"]
+- !private ["s28CustomDebugStringConvertibleP", "pi"]
+- !private ["s28CustomDebugStringConvertibleP", "scale"]
+- !private ["s28CustomDebugStringConvertibleP", "scaled"]
+- !private ["s28CustomDebugStringConvertibleP", "set"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "truncatingRemainder"]
+- !private ["s28CustomDebugStringConvertibleP", "upperBound"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s28CustomDebugStringConvertibleP", "zero"]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGRect"]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGSizeProxy"]
+- ["s29CustomPlaygroundQuickLookableP", "CompatibleType"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "height"]
+- !private ["s29CustomPlaygroundQuickLookableP", "infinity"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "intersection"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isEven"]
+- ["s29CustomPlaygroundQuickLookableP", "kf"]
+- !private ["s29CustomPlaygroundQuickLookableP", "origin"]
+- !private ["s29CustomPlaygroundQuickLookableP", "pi"]
+- !private ["s29CustomPlaygroundQuickLookableP", "scaled"]
+- !private ["s29CustomPlaygroundQuickLookableP", "size"]
+- !private ["s29CustomPlaygroundQuickLookableP", "truncatingRemainder"]
+- !private ["s29CustomPlaygroundQuickLookableP", "width"]
+- !private ["s29CustomPlaygroundQuickLookableP", "x"]
+- !private ["s29CustomPlaygroundQuickLookableP", "y"]
+- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
+- !private ["s17CustomReflectableP", "CGRect"]
+- !private ["s17CustomReflectableP", "CGSizeProxy"]
+- ["s17CustomReflectableP", "CompatibleType"]
+- !private ["s17CustomReflectableP", "DataProxy"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "animatedImage"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "clamped"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "flatMap"]
+- !private ["s17CustomReflectableP", "height"]
+- !private ["s17CustomReflectableP", "infinity"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "intersection"]
+- !private ["s17CustomReflectableP", "isEven"]
+- ["s17CustomReflectableP", "kf"]
+- !private ["s17CustomReflectableP", "lowerBound"]
+- !private ["s17CustomReflectableP", "origin"]
+- !private ["s17CustomReflectableP", "pi"]
+- !private ["s17CustomReflectableP", "scaled"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "truncatingRemainder"]
+- !private ["s17CustomReflectableP", "upperBound"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s17CustomReflectableP", "zero"]
+- ["s23CustomStringConvertibleP", "CompatibleType"]
+- !private ["s23CustomStringConvertibleP", "DataProxy"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "animatedImage"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "cgImage"]
+- !private ["s23CustomStringConvertibleP", "cgPath"]
+- !private ["s23CustomStringConvertibleP", "clamped"]
+- !private ["s23CustomStringConvertibleP", "doubleValue"]
+- !private ["s23CustomStringConvertibleP", "draw"]
+- !private ["s23CustomStringConvertibleP", "duration"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "getBytes"]
+- !private ["s23CustomStringConvertibleP", "imageOrientation"]
+- !private ["s23CustomStringConvertibleP", "images"]
+- !private ["s23CustomStringConvertibleP", "infinity"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEven"]
+- ["s23CustomStringConvertibleP", "kf"]
+- !private ["s23CustomStringConvertibleP", "lowerBound"]
+- !private ["s23CustomStringConvertibleP", "pi"]
+- !private ["s23CustomStringConvertibleP", "scale"]
+- !private ["s23CustomStringConvertibleP", "set"]
+- !private ["s23CustomStringConvertibleP", "size"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "truncatingRemainder"]
+- !private ["s23CustomStringConvertibleP", "upperBound"]
+- ["10Foundation4DataV", "CompatibleType"]
+- ["10Foundation4DataV", "DataProxy"]
+- ["10Foundation4DataV", "deinit"]
+- ["10Foundation4DataV", "kf"]
+- ["10Kingfisher9DataProxyV", "Data"]
+- ["10Kingfisher9DataProxyV", "ImageFormat"]
+- !private ["10Kingfisher9DataProxyV", "ImageHeaderData"]
+- !private ["10Kingfisher9DataProxyV", "NSData"]
+- !private ["10Kingfisher9DataProxyV", "UInt8"]
+- !private ["10Kingfisher9DataProxyV", "base"]
+- ["10Kingfisher9DataProxyV", "imageFormat"]
+- ["10Kingfisher9DataProxyV", "init"]
+- !private ["Se", "CGRect"]
+- !private ["Se", "CGSizeProxy"]
+- ["Se", "CompatibleType"]
+- !private ["Se", "DataProxy"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "animatedImage"]
+- !private ["Se", "append"]
+- !private ["Se", "clamped"]
+- !private ["Se", "first"]
+- !private ["Se", "flatMap"]
+- !private ["Se", "height"]
+- !private ["Se", "infinity"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "intersection"]
+- !private ["Se", "isEven"]
+- ["Se", "kf"]
+- !private ["Se", "origin"]
+- !private ["Se", "pi"]
+- !private ["Se", "scaled"]
+- !private ["Se", "size"]
+- !private ["Se", "subscript"]
+- !private ["Se", "truncatingRemainder"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["Se", "zero"]
+- !private ["Sd", "infinity"]
+- !private ["SE", "CGRect"]
+- !private ["SE", "CGSizeProxy"]
+- ["SE", "CompatibleType"]
+- !private ["SE", "DataProxy"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "animatedImage"]
+- !private ["SE", "append"]
+- !private ["SE", "clamped"]
+- !private ["SE", "first"]
+- !private ["SE", "flatMap"]
+- !private ["SE", "height"]
+- !private ["SE", "infinity"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "intersection"]
+- !private ["SE", "isEven"]
+- ["SE", "kf"]
+- !private ["SE", "origin"]
+- !private ["SE", "pi"]
+- !private ["SE", "scaled"]
+- !private ["SE", "size"]
+- !private ["SE", "subscript"]
+- !private ["SE", "truncatingRemainder"]
+- !private ["SE", "width"]
+- !private ["SE", "x"]
+- !private ["SE", "y"]
+- !private ["SE", "zero"]
+- !private ["SQ", "CGRect"]
+- !private ["SQ", "CGSizeProxy"]
+- ["SQ", "ClosedRange"]
+- ["SQ", "CompatibleType"]
+- !private ["SQ", "DataProxy"]
+- ["SQ", "GIF"]
+- ["SQ", "JPEG"]
+- !private ["SQ", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- ["SQ", "PNG"]
+- ["SQ", "Self"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "addPath"]
+- !private ["SQ", "all"]
+- !private ["SQ", "animatedImage"]
+- !private ["SQ", "append"]
+- ["SQ", "aspectFill"]
+- ["SQ", "aspectFit"]
+- !private ["SQ", "bottomLeft"]
+- !private ["SQ", "bottomRight"]
+- !private ["SQ", "bytesPerRow"]
+- !private ["SQ", "cgImage"]
+- !private ["SQ", "cgPath"]
+- !private ["SQ", "clamped"]
+- !private ["SQ", "clip"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "cropping"]
+- !private ["SQ", "data"]
+- !private ["SQ", "destinationIn"]
+- !private ["SQ", "doubleValue"]
+- !private ["SQ", "draw"]
+- !private ["SQ", "duration"]
+- !private ["SQ", "first"]
+- !private ["SQ", "flatMap"]
+- !private ["SQ", "getBytes"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "height"]
+- !private ["SQ", "imageOrientation"]
+- !private ["SQ", "images"]
+- !private ["SQ", "infinity"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "insert"]
+- !private ["SQ", "intersection"]
+- !private ["SQ", "isEven"]
+- ["SQ", "kf"]
+- !private ["SQ", "lowerBound"]
+- !private ["SQ", "makeImage"]
+- !private ["SQ", "max"]
+- !private ["SQ", "min"]
+- !private ["SQ", "origin"]
+- !private ["SQ", "pi"]
+- !private ["SQ", "scale"]
+- ["SQ", "scaleAspectFill"]
+- ["SQ", "scaleAspectFit"]
+- !private ["SQ", "scaleBy"]
+- !private ["SQ", "scaled"]
+- !private ["SQ", "set"]
+- !private ["SQ", "size"]
+- !private ["SQ", "sourceAtop"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "topLeft"]
+- !private ["SQ", "topRight"]
+- !private ["SQ", "translateBy"]
+- !private ["SQ", "truncatingRemainder"]
+- !private ["SQ", "uiRectCorner"]
+- ["SQ", "unknown"]
+- !private ["SQ", "up"]
+- !private ["SQ", "upperBound"]
+- !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["SQ", "zero"]
+- !private ["s25ExpressibleByArrayLiteralP", "all"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "bottomLeft"]
+- !private ["s25ExpressibleByArrayLiteralP", "bottomRight"]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "topLeft"]
+- !private ["s25ExpressibleByArrayLiteralP", "topRight"]
+- !private ["s25ExpressibleByArrayLiteralP", "uiRectCorner"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s27ExpressibleByBooleanLiteralP", "doubleValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "clamped"]
+- !private ["s25ExpressibleByFloatLiteralP", "doubleValue"]
+- !private ["s25ExpressibleByFloatLiteralP", "infinity"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "isEven"]
+- !private ["s25ExpressibleByFloatLiteralP", "pi"]
+- !private ["s25ExpressibleByFloatLiteralP", "truncatingRemainder"]
+- !private ["s27ExpressibleByIntegerLiteralP", "clamped"]
+- !private ["s27ExpressibleByIntegerLiteralP", "doubleValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "infinity"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "isEven"]
+- !private ["s27ExpressibleByIntegerLiteralP", "pi"]
+- !private ["s27ExpressibleByIntegerLiteralP", "truncatingRemainder"]
+- !private ["s23ExpressibleByNilLiteralP", "animatedImage"]
+- !private ["s23ExpressibleByNilLiteralP", "flatMap"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["10Kingfisher6FilterV", "colorControl"]
+- !private ["10Kingfisher6FilterV", "tint"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["Sf", "Bool"]
+- !private ["Sf", "init"]
+- ["Sf", "isEven"]
+- !private ["Sf", "pi"]
+- !private ["Sf", "truncatingRemainder"]
+- !private ["SF", "clamped"]
+- !private ["SF", "infinity"]
+- !private ["SF", "init"]
+- !private ["SF", "isEven"]
+- !private ["SF", "pi"]
+- !private ["SF", "truncatingRemainder"]
+- ["SH", "CompatibleType"]
+- !private ["SH", "DataProxy"]
+- ["SH", "GIF"]
+- ["SH", "JPEG"]
+- !private ["SH", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- ["SH", "PNG"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "addPath"]
+- !private ["SH", "animatedImage"]
+- !private ["SH", "append"]
+- ["SH", "aspectFill"]
+- ["SH", "aspectFit"]
+- !private ["SH", "bytesPerRow"]
+- !private ["SH", "cgImage"]
+- !private ["SH", "cgPath"]
+- !private ["SH", "clamped"]
+- !private ["SH", "clip"]
+- !private ["SH", "cropping"]
+- !private ["SH", "data"]
+- !private ["SH", "destinationIn"]
+- !private ["SH", "doubleValue"]
+- !private ["SH", "draw"]
+- !private ["SH", "duration"]
+- !private ["SH", "first"]
+- !private ["SH", "flatMap"]
+- !private ["SH", "getBytes"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "height"]
+- !private ["SH", "imageOrientation"]
+- !private ["SH", "images"]
+- !private ["SH", "infinity"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isEven"]
+- ["SH", "kf"]
+- !private ["SH", "lowerBound"]
+- !private ["SH", "makeImage"]
+- !private ["SH", "pi"]
+- !private ["SH", "scale"]
+- ["SH", "scaleAspectFill"]
+- ["SH", "scaleAspectFit"]
+- !private ["SH", "scaleBy"]
+- !private ["SH", "set"]
+- !private ["SH", "size"]
+- !private ["SH", "sourceAtop"]
+- !private ["SH", "subscript"]
+- !private ["SH", "translateBy"]
+- !private ["SH", "truncatingRemainder"]
+- ["SH", "unknown"]
+- !private ["SH", "up"]
+- !private ["SH", "upperBound"]
+- !private ["SH", "width"]
+- !private ["s6HasherV", "combine"]
+- ["10Kingfisher11ImageFormatO", "GIF"]
+- ["10Kingfisher11ImageFormatO", "JPEG"]
+- ["10Kingfisher11ImageFormatO", "PNG"]
+- ["10Kingfisher11ImageFormatO", "__derived_enum_equals"]
+- ["10Kingfisher11ImageFormatO", "deinit"]
+- ["10Kingfisher11ImageFormatO", "hash"]
+- ["10Kingfisher11ImageFormatO", "hashValue"]
+- ["10Kingfisher11ImageFormatO", "unknown"]
+- ["10Kingfisher11ImageSourceC", "CGImageSource"]
+- ["10Kingfisher11ImageSourceC", "deinit"]
+- ["10Kingfisher11ImageSourceC", "imageRef"]
+- ["10Kingfisher11ImageSourceC", "init"]
+- !private ["Si", "init"]
+- ["10KingfisherAAC", "Bool"]
+- !private ["10KingfisherAAC", "CFData"]
+- ["10KingfisherAAC", "CGContext"]
+- ["10KingfisherAAC", "CGFloat"]
+- ["10KingfisherAAC", "CGImage"]
+- !private ["10KingfisherAAC", "CGImageSource"]
+- !private ["10KingfisherAAC", "CGImageSourceCopyPropertiesAtIndex"]
+- !private ["10KingfisherAAC", "CGImageSourceCreateImageAtIndex"]
+- !private ["10KingfisherAAC", "CGImageSourceCreateWithData"]
+- !private ["10KingfisherAAC", "CGImageSourceGetCount"]
+- ["10KingfisherAAC", "CGPoint"]
+- !private ["10KingfisherAAC", "CGRect"]
+- ["10KingfisherAAC", "CGSize"]
+- ["10KingfisherAAC", "Color"]
+- ["10KingfisherAAC", "ContentMode"]
+- ["10KingfisherAAC", "Data"]
+- !private ["10KingfisherAAC", "Double"]
+- !private ["10KingfisherAAC", "Float"]
+- ["10KingfisherAAC", "Image"]
+- ["10KingfisherAAC", "ImageSource"]
+- !private ["10KingfisherAAC", "Int"]
+- !private ["10KingfisherAAC", "Kingfisher"]
+- !private ["10KingfisherAAC", "NSDictionary"]
+- !private ["10KingfisherAAC", "NSNumber"]
+- ["10KingfisherAAC", "RectCorner"]
+- !private ["10KingfisherAAC", "String"]
+- ["10KingfisherAAC", "TimeInterval"]
+- !private ["10KingfisherAAC", "UIBezierPath"]
+- !private ["10KingfisherAAC", "UIGraphicsBeginImageContextWithOptions"]
+- !private ["10KingfisherAAC", "UIGraphicsEndImageContext"]
+- !private ["10KingfisherAAC", "UIGraphicsGetCurrentContext"]
+- !private ["10KingfisherAAC", "UIGraphicsGetImageFromCurrentImageContext"]
+- !private ["10KingfisherAAC", "UIImageJPEGRepresentation"]
+- !private ["10KingfisherAAC", "UIImagePNGRepresentation"]
+- !private ["10KingfisherAAC", "UIRectFill"]
+- ["10KingfisherAAC", "UIViewContentMode"]
+- !private ["10KingfisherAAC", "UInt32"]
+- ["10KingfisherAAC", "adjusted"]
+- ["10KingfisherAAC", "animated"]
+- ["10KingfisherAAC", "animatedImageData"]
+- !private ["10KingfisherAAC", "animatedImageDataKey"]
+- !private ["10KingfisherAAC", "apply"]
+- !private ["10KingfisherAAC", "assertionFailure"]
+- !private ["10KingfisherAAC", "base"]
+- ["10KingfisherAAC", "beginContext"]
+- ["10KingfisherAAC", "blurred"]
+- ["10KingfisherAAC", "cgImage"]
+- !private ["10KingfisherAAC", "constrained"]
+- !private ["10KingfisherAAC", "constrainedRect"]
+- ["10KingfisherAAC", "crop"]
+- ["10KingfisherAAC", "decoded"]
+- ["10KingfisherAAC", "draw"]
+- ["10KingfisherAAC", "duration"]
+- ["10KingfisherAAC", "endContext"]
+- !private ["10KingfisherAAC", "filling"]
+- !private ["10KingfisherAAC", "floor"]
+- ["10KingfisherAAC", "gifRepresentation"]
+- ["10KingfisherAAC", "image"]
+- !private ["10KingfisherAAC", "imageFormat"]
+- ["10KingfisherAAC", "imageSource"]
+- !private ["10KingfisherAAC", "imageSourceKey"]
+- ["10KingfisherAAC", "images"]
+- ["10KingfisherAAC", "jpegRepresentation"]
+- !private ["10KingfisherAAC", "kCGImagePropertyGIFDelayTime"]
+- !private ["10KingfisherAAC", "kCGImagePropertyGIFDictionary"]
+- !private ["10KingfisherAAC", "kCGImagePropertyGIFUnclampedDelayTime"]
+- !private ["10KingfisherAAC", "kCGImageSourceShouldCache"]
+- !private ["10KingfisherAAC", "kCGImageSourceTypeIdentifierHint"]
+- !private ["10KingfisherAAC", "kUTTypeGIF"]
+- !private ["10KingfisherAAC", "kvImageEdgeExtend"]
+- !private ["10KingfisherAAC", "max"]
+- ["10KingfisherAAC", "normalized"]
+- !private ["10KingfisherAAC", "objc_getAssociatedObject"]
+- !private ["10KingfisherAAC", "objc_setAssociatedObject"]
+- ["10KingfisherAAC", "overlaying"]
+- ["10KingfisherAAC", "pngRepresentation"]
+- ["10KingfisherAAC", "resize"]
+- ["10KingfisherAAC", "scale"]
+- ["10KingfisherAAC", "size"]
+- !private ["10KingfisherAAC", "sqrt"]
+- ["10KingfisherAAC", "tinted"]
+- !private ["10KingfisherAAC", "vImageBoxConvolve_ARGB8888"]
+- !private ["10KingfisherAAC", "vImagePixelCount"]
+- !private ["10KingfisherAAC", "vImage_Buffer"]
+- !private ["10KingfisherAAC", "vImage_Flags"]
+- !private ["10Kingfisher0A10CompatibleP", "CGSizeProxy"]
+- ["10Kingfisher0A10CompatibleP", "CompatibleType"]
+- !private ["10Kingfisher0A10CompatibleP", "DataProxy"]
+- ["10Kingfisher0A10CompatibleP", ""]
+- !private ["10Kingfisher0A10CompatibleP", "animatedImage"]
+- !private ["10Kingfisher0A10CompatibleP", "cgImage"]
+- !private ["10Kingfisher0A10CompatibleP", "draw"]
+- !private ["10Kingfisher0A10CompatibleP", "duration"]
+- !private ["10Kingfisher0A10CompatibleP", "height"]
+- !private ["10Kingfisher0A10CompatibleP", "imageOrientation"]
+- !private ["10Kingfisher0A10CompatibleP", "images"]
+- !private ["10Kingfisher0A10CompatibleP", "init"]
+- !private ["10Kingfisher0A10CompatibleP", "init"]
+- ["10Kingfisher0A10CompatibleP", "kf"]
+- !private ["10Kingfisher0A10CompatibleP", "scale"]
+- !private ["10Kingfisher0A10CompatibleP", "size"]
+- !private ["10Kingfisher0A10CompatibleP", "width"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "infinity"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEven"]
+- !private ["s25LosslessStringConvertibleP", "pi"]
+- !private ["s25LosslessStringConvertibleP", "truncatingRemainder"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["SM", "CompatibleType"]
+- !private ["SM", "DataProxy"]
+- !private ["SM", "append"]
+- !private ["SM", "first"]
+- !private ["SM", "init"]
+- ["SM", "kf"]
+- !private ["SM", "subscript"]
+- !private ["So8NSCodingP", "animatedImage"]
+- !private ["So8NSCodingP", "cgImage"]
+- !private ["So8NSCodingP", "cgPath"]
+- !private ["So8NSCodingP", "doubleValue"]
+- !private ["So8NSCodingP", "draw"]
+- !private ["So8NSCodingP", "duration"]
+- !private ["So8NSCodingP", "getBytes"]
+- !private ["So8NSCodingP", "imageOrientation"]
+- !private ["So8NSCodingP", "images"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "kf"]
+- !private ["So8NSCodingP", "scale"]
+- !private ["So8NSCodingP", "set"]
+- !private ["So8NSCodingP", "size"]
+- !private ["So8NSCodingP", "subscript"]
+- !private ["So9NSCopyingP", "cgPath"]
+- !private ["So9NSCopyingP", "doubleValue"]
+- !private ["So9NSCopyingP", "getBytes"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "set"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So6NSDataC", "getBytes"]
+- !private ["So12NSDictionaryC", "subscript"]
+- !private ["So17NSFastEnumerationP", "subscript"]
+- !private ["So21NSItemProviderReadingP", "animatedImage"]
+- !private ["So21NSItemProviderReadingP", "cgImage"]
+- !private ["So21NSItemProviderReadingP", "draw"]
+- !private ["So21NSItemProviderReadingP", "duration"]
+- !private ["So21NSItemProviderReadingP", "imageOrientation"]
+- !private ["So21NSItemProviderReadingP", "images"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "kf"]
+- !private ["So21NSItemProviderReadingP", "scale"]
+- !private ["So21NSItemProviderReadingP", "set"]
+- !private ["So21NSItemProviderReadingP", "size"]
+- !private ["So21NSItemProviderWritingP", "animatedImage"]
+- !private ["So21NSItemProviderWritingP", "cgImage"]
+- !private ["So21NSItemProviderWritingP", "draw"]
+- !private ["So21NSItemProviderWritingP", "duration"]
+- !private ["So21NSItemProviderWritingP", "imageOrientation"]
+- !private ["So21NSItemProviderWritingP", "images"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "kf"]
+- !private ["So21NSItemProviderWritingP", "scale"]
+- !private ["So21NSItemProviderWritingP", "set"]
+- !private ["So21NSItemProviderWritingP", "size"]
+- !private ["So16NSMutableCopyingP", "getBytes"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- !private ["So8NSNumberC", "doubleValue"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "CGSize"]
+- ["So8NSObjectC", "Color"]
+- ["So8NSObjectC", "Image"]
+- !private ["So8NSObjectC", "animatedImage"]
+- !private ["So8NSObjectC", "cgImage"]
+- !private ["So8NSObjectC", "cgPath"]
+- !private ["So8NSObjectC", "doubleValue"]
+- !private ["So8NSObjectC", "draw"]
+- !private ["So8NSObjectC", "duration"]
+- !private ["So8NSObjectC", "getBytes"]
+- !private ["So8NSObjectC", "imageOrientation"]
+- !private ["So8NSObjectC", "images"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "kf"]
+- ["So8NSObjectC", "kf_adjusted"]
+- ["So8NSObjectC", "kf_blurred"]
+- ["So8NSObjectC", "kf_image"]
+- ["So8NSObjectC", "kf_normalized"]
+- ["So8NSObjectC", "kf_overlaying"]
+- ["So8NSObjectC", "kf_resize"]
+- ["So8NSObjectC", "kf_tinted"]
+- !private ["So8NSObjectC", "scale"]
+- !private ["So8NSObjectC", "set"]
+- !private ["So8NSObjectC", "size"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectP", "animatedImage"]
+- !private ["So8NSObjectP", "cgImage"]
+- !private ["So8NSObjectP", "cgPath"]
+- !private ["So8NSObjectP", "doubleValue"]
+- !private ["So8NSObjectP", "draw"]
+- !private ["So8NSObjectP", "duration"]
+- !private ["So8NSObjectP", "getBytes"]
+- !private ["So8NSObjectP", "imageOrientation"]
+- !private ["So8NSObjectP", "images"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "kf"]
+- !private ["So8NSObjectP", "scale"]
+- !private ["So8NSObjectP", "set"]
+- !private ["So8NSObjectP", "size"]
+- !private ["So8NSObjectP", "subscript"]
+- !private ["So14NSSecureCodingP", "animatedImage"]
+- !private ["So14NSSecureCodingP", "cgImage"]
+- !private ["So14NSSecureCodingP", "cgPath"]
+- !private ["So14NSSecureCodingP", "doubleValue"]
+- !private ["So14NSSecureCodingP", "draw"]
+- !private ["So14NSSecureCodingP", "duration"]
+- !private ["So14NSSecureCodingP", "getBytes"]
+- !private ["So14NSSecureCodingP", "imageOrientation"]
+- !private ["So14NSSecureCodingP", "images"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "kf"]
+- !private ["So14NSSecureCodingP", "scale"]
+- !private ["So14NSSecureCodingP", "set"]
+- !private ["So14NSSecureCodingP", "size"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- !private ["So7NSValueC", "doubleValue"]
+- !private ["Sj", "clamped"]
+- !private ["Sj", "infinity"]
+- !private ["Sj", "init"]
+- !private ["Sj", "isEven"]
+- !private ["Sj", "pi"]
+- !private ["Sj", "truncatingRemainder"]
+- !private ["s9OptionSetP", "all"]
+- !private ["s9OptionSetP", "bottomLeft"]
+- !private ["s9OptionSetP", "bottomRight"]
+- !private ["s9OptionSetP", "contains"]
+- !private ["s9OptionSetP", "insert"]
+- !private ["s9OptionSetP", "topLeft"]
+- !private ["s9OptionSetP", "topRight"]
+- !private ["s9OptionSetP", "uiRectCorner"]
+- !private ["Sq", "animatedImage"]
+- !private ["Sq", "flatMap"]
+- !private ["So18UIImageOrientationV", "up"]
+- ["Sk", "CompatibleType"]
+- !private ["Sk", "DataProxy"]
+- !private ["Sk", "append"]
+- !private ["Sk", "first"]
+- !private ["Sk", "init"]
+- ["Sk", "kf"]
+- !private ["Sk", "lowerBound"]
+- !private ["Sk", "subscript"]
+- !private ["Sk", "upperBound"]
+- !private ["SX", "lowerBound"]
+- !private ["SX", "upperBound"]
+- ["Sm", "CompatibleType"]
+- !private ["Sm", "DataProxy"]
+- !private ["Sm", "append"]
+- !private ["Sm", "first"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- ["Sm", "kf"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["SY", "all"]
+- !private ["SY", "aspectFill"]
+- !private ["SY", "aspectFit"]
+- !private ["SY", "bottomLeft"]
+- !private ["SY", "bottomRight"]
+- !private ["SY", "contains"]
+- !private ["SY", "destinationIn"]
+- !private ["SY", "insert"]
+- ["SY", "scaleAspectFill"]
+- ["SY", "scaleAspectFit"]
+- !private ["SY", "sourceAtop"]
+- !private ["SY", "topLeft"]
+- !private ["SY", "topRight"]
+- !private ["SY", "uiRectCorner"]
+- !private ["SY", "up"]
+- ["10Kingfisher10RectCornerV", "UIRectCorner"]
+- !private ["10Kingfisher10RectCornerV", "all"]
+- !private ["10Kingfisher10RectCornerV", "bottomLeft"]
+- !private ["10Kingfisher10RectCornerV", "bottomRight"]
+- !private ["10Kingfisher10RectCornerV", "contains"]
+- !private ["10Kingfisher10RectCornerV", "deinit"]
+- !private ["10Kingfisher10RectCornerV", "topLeft"]
+- !private ["10Kingfisher10RectCornerV", "topRight"]
+- ["10Kingfisher10RectCornerV", "uiRectCorner"]
+- ["10Foundation20ReferenceConvertibleP", "CompatibleType"]
+- !private ["10Foundation20ReferenceConvertibleP", "DataProxy"]
+- ["10Foundation20ReferenceConvertibleP", "kf"]
+- ["ST", "CompatibleType"]
+- !private ["ST", "DataProxy"]
+- !private ["ST", "append"]
+- !private ["ST", "first"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- ["ST", "kf"]
+- !private ["ST", "lowerBound"]
+- !private ["ST", "subscript"]
+- !private ["ST", "upperBound"]
+- !private ["s10SetAlgebraP", "all"]
+- !private ["s10SetAlgebraP", "bottomLeft"]
+- !private ["s10SetAlgebraP", "bottomRight"]
+- !private ["s10SetAlgebraP", "contains"]
+- !private ["s10SetAlgebraP", "insert"]
+- !private ["s10SetAlgebraP", "topLeft"]
+- !private ["s10SetAlgebraP", "topRight"]
+- !private ["s10SetAlgebraP", "uiRectCorner"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "clamped"]
+- !private ["s13SignedNumericP", "infinity"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s13SignedNumericP", "isEven"]
+- !private ["s13SignedNumericP", "pi"]
+- !private ["s13SignedNumericP", "truncatingRemainder"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["Sx", "clamped"]
+- !private ["Sx", "infinity"]
+- !private ["Sx", "init"]
+- !private ["Sx", "isEven"]
+- !private ["Sx", "pi"]
+- !private ["Sx", "truncatingRemainder"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "animatedImage"]
+- !private ["So29UIAccessibilityIdentificationP", "cgImage"]
+- !private ["So29UIAccessibilityIdentificationP", "draw"]
+- !private ["So29UIAccessibilityIdentificationP", "duration"]
+- !private ["So29UIAccessibilityIdentificationP", "imageOrientation"]
+- !private ["So29UIAccessibilityIdentificationP", "images"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "kf"]
+- !private ["So29UIAccessibilityIdentificationP", "scale"]
+- !private ["So29UIAccessibilityIdentificationP", "size"]
+- !private ["So12UIBezierPathC", "cgPath"]
+- !private ["So12UIBezierPathC", "init"]
+- !private ["So7UIColorC", "set"]
+- ["So7UIImageC", "CGFloat"]
+- ["So7UIImageC", "CGSize"]
+- ["So7UIImageC", "Color"]
+- ["So7UIImageC", "Image"]
+- !private ["So7UIImageC", "animatedImage"]
+- !private ["So7UIImageC", "cgImage"]
+- !private ["So7UIImageC", "deinit"]
+- !private ["So7UIImageC", "draw"]
+- !private ["So7UIImageC", "duration"]
+- !private ["So7UIImageC", "imageOrientation"]
+- !private ["So7UIImageC", "images"]
+- !private ["So7UIImageC", "init"]
+- !private ["So7UIImageC", "kf"]
+- ["So7UIImageC", "kf_adjusted"]
+- ["So7UIImageC", "kf_blurred"]
+- ["So7UIImageC", "kf_image"]
+- ["So7UIImageC", "kf_normalized"]
+- ["So7UIImageC", "kf_overlaying"]
+- ["So7UIImageC", "kf_resize"]
+- ["So7UIImageC", "kf_tinted"]
+- !private ["So7UIImageC", "scale"]
+- !private ["So7UIImageC", "size"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "animatedImage"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "cgImage"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "draw"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "duration"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "imageOrientation"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "images"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "init"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "kf"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "scale"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "size"]
+- !private ["So12UIRectCornerV", "bottomLeft"]
+- !private ["So12UIRectCornerV", "bottomRight"]
+- !private ["So12UIRectCornerV", "insert"]
+- !private ["So12UIRectCornerV", "topLeft"]
+- !private ["So12UIRectCornerV", "topRight"]
+- !private ["Su", "init"]
+- !private ["s6UInt32V", "init"]
+- !private ["SU", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["14CoreFoundation9_CFObjectP", "addPath"]
+- !private ["14CoreFoundation9_CFObjectP", "bytesPerRow"]
+- !private ["14CoreFoundation9_CFObjectP", "clip"]
+- !private ["14CoreFoundation9_CFObjectP", "cropping"]
+- !private ["14CoreFoundation9_CFObjectP", "data"]
+- !private ["14CoreFoundation9_CFObjectP", "draw"]
+- !private ["14CoreFoundation9_CFObjectP", "height"]
+- !private ["14CoreFoundation9_CFObjectP", "makeImage"]
+- !private ["14CoreFoundation9_CFObjectP", "scaleBy"]
+- !private ["14CoreFoundation9_CFObjectP", "translateBy"]
+- !private ["14CoreFoundation9_CFObjectP", "width"]
+- !private ["s15_CVarArgAlignedP", "clamped"]
+- !private ["s15_CVarArgAlignedP", "infinity"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s15_CVarArgAlignedP", "isEven"]
+- !private ["s15_CVarArgAlignedP", "pi"]
+- !private ["s15_CVarArgAlignedP", "truncatingRemainder"]
+- !private ["s22_CVarArgPassedAsDoubleP", "clamped"]
+- !private ["s22_CVarArgPassedAsDoubleP", "infinity"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "isEven"]
+- !private ["s22_CVarArgPassedAsDoubleP", "pi"]
+- !private ["s22_CVarArgPassedAsDoubleP", "truncatingRemainder"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "infinity"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "isEven"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "pi"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "truncatingRemainder"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "infinity"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "isEven"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pi"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "truncatingRemainder"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "set"]
+- !private ["s26_ExpressibleByImageLiteralP", "animatedImage"]
+- !private ["s26_ExpressibleByImageLiteralP", "cgImage"]
+- !private ["s26_ExpressibleByImageLiteralP", "draw"]
+- !private ["s26_ExpressibleByImageLiteralP", "duration"]
+- !private ["s26_ExpressibleByImageLiteralP", "imageOrientation"]
+- !private ["s26_ExpressibleByImageLiteralP", "images"]
+- !private ["s26_ExpressibleByImageLiteralP", "init"]
+- !private ["s26_ExpressibleByImageLiteralP", "kf"]
+- !private ["s26_ExpressibleByImageLiteralP", "scale"]
+- !private ["s26_ExpressibleByImageLiteralP", "size"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "doubleValue"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "getBytes"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "infinity"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEven"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "pi"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "truncatingRemainder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "animatedImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cgImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cgPath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "doubleValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "draw"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "duration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getBytes"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "imageOrientation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "images"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kf"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "size"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "CGRect"]
+- !private ["s21_ObjectiveCBridgeableP", "CGSizeProxy"]
+- ["s21_ObjectiveCBridgeableP", "CompatibleType"]
+- !private ["s21_ObjectiveCBridgeableP", "DataProxy"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "animatedImage"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "clamped"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "flatMap"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- !private ["s21_ObjectiveCBridgeableP", "infinity"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "intersection"]
+- !private ["s21_ObjectiveCBridgeableP", "isEven"]
+- ["s21_ObjectiveCBridgeableP", "kf"]
+- !private ["s21_ObjectiveCBridgeableP", "origin"]
+- !private ["s21_ObjectiveCBridgeableP", "pi"]
+- !private ["s21_ObjectiveCBridgeableP", "scaled"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "truncatingRemainder"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+- !private ["s21_ObjectiveCBridgeableP", "zero"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["So22objc_AssociationPolicyV", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["So13vImage_BufferV", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s13ArrayProtocolP"
+- "SK"
+- !private "SB"
+- !private "Sz"
+- !private "Sb"
+- !private "So11CGBlendModeV"
+- !private "So12CGContextRefa"
+- !private "12CoreGraphics7CGFloatV"
+- !private "So10CGImageRefa"
+- !private "So7CGPointV"
+- "So6CGRectV"
+- "So6CGSizeV"
+- "10Kingfisher11CGSizeProxyV"
+- !private "s7CVarArgP"
+- !private "SN"
+- "Sl"
+- "SL"
+- "10Kingfisher11ContentModeO"
+- !private "So17UIViewContentModeV"
+- "10Kingfisher11ContentModeO"
+- "So17UIViewContentModeV"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "10Foundation4DataV"
+- "10Kingfisher9DataProxyV"
+- "Se"
+- !private "Sd"
+- "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "10Kingfisher6FilterV"
+- !private "s17FixedWidthIntegerP"
+- "Sf"
+- !private "SF"
+- "SH"
+- !private "s6HasherV"
+- "10Kingfisher11ImageFormatO"
+- "10Kingfisher11ImageSourceC"
+- !private "Si"
+- "10KingfisherAAC"
+- "10Kingfisher0A10CompatibleP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "SM"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So6NSDataC"
+- !private "So12NSDictionaryC"
+- !private "So17NSFastEnumerationP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSNumberC"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So7NSValueC"
+- !private "Sj"
+- !private "s9OptionSetP"
+- !private "Sq"
+- !private "So18UIImageOrientationV"
+- "Sk"
+- !private "SX"
+- "Sm"
+- "SY"
+- "10Kingfisher10RectCornerV"
+- "10Foundation20ReferenceConvertibleP"
+- "ST"
+- !private "s10SetAlgebraP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "Sx"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIBezierPathC"
+- !private "So7UIColorC"
+- "So7UIImageC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "So12UIRectCornerV"
+- !private "Su"
+- !private "s6UInt32V"
+- !private "SU"
+- !private "s18_BitwiseOperationsP"
+- !private "14CoreFoundation9_CFObjectP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s26_ExpressibleByImageLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+- !private "So22objc_AssociationPolicyV"
+- !private "So13vImage_BufferV"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/os.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h"
+- "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/Pods/Kingfisher/Sources/Kingfisher.h"
+- "/Users/xiaoliang.ren/Desktop/renxl/ren/renxl/NNMintFurniture/build/Pods.build/Debug-iphoneos/Kingfisher.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "8ad370c10e37f76a1e2639b0c249f7ad"

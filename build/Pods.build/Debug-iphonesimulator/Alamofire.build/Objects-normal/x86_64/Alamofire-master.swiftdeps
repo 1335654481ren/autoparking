@@ -1,0 +1,21 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "8eb0678faa8114b699fd9c173d1aa4ef"
+build_time: [1541051003, 38210000]
+inputs:
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/AFError.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Alamofire.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/MultipartFormData.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Notifications.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/ParameterEncoding.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Request.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Response.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/ResponseSerialization.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Result.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/ServerTrustPolicy.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/SessionDelegate.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/SessionManager.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/TaskDelegate.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Timeline.swift": [1538581193, 0]
+  "/Users/renxl/Desktop/renxl/xcode/NNMintFurniture/Pods/Alamofire/Source/Validation.swift": [1538581193, 0]
