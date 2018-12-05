@@ -161,6 +161,13 @@
 		69C769261F4AE69F00376B30 /* NNSnapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C769251F4AE69F00376B30 /* NNSnapKitController.swift */; };
 		69C769281F4AE7C800376B30 /* guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C769271F4AE7C800376B30 /* guide.swift */; };
 		813CCCB5B2A2E2B08A82A481 /* Pods_NNMintFurniture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC85EFF03B441FC01A7A94D /* Pods_NNMintFurniture.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9E2C9686219FB84B007E611E /* CallCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C9685219FB84B007E611E /* CallCarViewController.swift */; };
+		9E2C9694219FF972007E611E /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C9693219FF972007E611E /* MenuList.swift */; };
+		9E2C969621A018AA007E611E /* StopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C969521A018AA007E611E /* StopView.swift */; };
+		9E7A131A21A2A57C00EB0739 /* HTTPSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A131921A2A57C00EB0739 /* HTTPSManager.swift */; };
+		9E7A14A421A7CCBA00EB0739 /* NNDownloadMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A14A321A7CCBA00EB0739 /* NNDownloadMapController.swift */; };
+		9E7A14AF21AD587C00EB0739 /* NNWebManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A14AE21AD587C00EB0739 /* NNWebManagerController.swift */; };
+		9E7A14CA21AF991200EB0739 /* server.cer in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E7A14C921AF991200EB0739 /* server.cer */; };
 		AA50306E216F457600A304B0 /* NetInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50306D216F457600A304B0 /* NetInterface.swift */; };
 		AAA340E52182C4E6005B372B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA340E42182C4E6005B372B /* LoginViewController.swift */; };
 		AAC8A7002173465200B40429 /* CGJsonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC8A6FF2173465200B40429 /* CGJsonStruct.swift */; };
@@ -289,6 +296,16 @@
 				0BB5BF05215E1ED600829A06 /* SwiftHTTP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E7A14BD21AF98A300EB0739 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				9E7A14CA21AF991200EB0739 /* server.cer in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -649,6 +666,13 @@
 		69C769231F4AD76A00376B30 /* NNValidationCodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNValidationCodeController.swift; sourceTree = "<group>"; };
 		69C769251F4AE69F00376B30 /* NNSnapKitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNSnapKitController.swift; sourceTree = "<group>"; };
 		69C769271F4AE7C800376B30 /* guide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guide.swift; sourceTree = "<group>"; };
+		9E2C9685219FB84B007E611E /* CallCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCarViewController.swift; sourceTree = "<group>"; };
+		9E2C9693219FF972007E611E /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		9E2C969521A018AA007E611E /* StopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopView.swift; sourceTree = "<group>"; };
+		9E7A131921A2A57C00EB0739 /* HTTPSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSManager.swift; sourceTree = "<group>"; };
+		9E7A14A321A7CCBA00EB0739 /* NNDownloadMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNDownloadMapController.swift; sourceTree = "<group>"; };
+		9E7A14AE21AD587C00EB0739 /* NNWebManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNWebManagerController.swift; sourceTree = "<group>"; };
+		9E7A14C921AF991200EB0739 /* server.cer */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.cer; sourceTree = "<group>"; };
 		A91616105C4E8BF0015C3E3A /* Pods-NNMintFurniture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNMintFurniture.release.xcconfig"; path = "Pods/Target Support Files/Pods-NNMintFurniture/Pods-NNMintFurniture.release.xcconfig"; sourceTree = "<group>"; };
 		AA50306D216F457600A304B0 /* NetInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetInterface.swift; sourceTree = "<group>"; };
 		AAA340E42182C4E6005B372B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -1271,6 +1295,7 @@
 				AAD46E2D216E06F1008C50DE /* scene.scnassets */,
 				696FEB1F1F3855E900069EB3 /* Main.storyboard */,
 				696FEB221F3855E900069EB3 /* Assets.xcassets */,
+				9E7A14C921AF991200EB0739 /* server.cer */,
 				696FEB241F3855E900069EB3 /* LaunchScreen.storyboard */,
 				696FEB271F3855E900069EB3 /* Info.plist */,
 			);
@@ -1344,6 +1369,8 @@
 				697D83941F3C3743009ABC29 /* NNConst.swift */,
 				AA50306D216F457600A304B0 /* NetInterface.swift */,
 				AAC8A6FF2173465200B40429 /* CGJsonStruct.swift */,
+				9E2C9693219FF972007E611E /* MenuList.swift */,
+				9E7A131921A2A57C00EB0739 /* HTTPSManager.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1479,6 +1506,8 @@
 			children = (
 				697D842D1F400AF8009ABC29 /* NNMeController.swift */,
 				69C769251F4AE69F00376B30 /* NNSnapKitController.swift */,
+				9E7A14A321A7CCBA00EB0739 /* NNDownloadMapController.swift */,
+				9E7A14AE21AD587C00EB0739 /* NNWebManagerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1527,6 +1556,8 @@
 			isa = PBXGroup;
 			children = (
 				AAA340E42182C4E6005B372B /* LoginViewController.swift */,
+				9E2C9685219FB84B007E611E /* CallCarViewController.swift */,
+				9E2C969521A018AA007E611E /* StopView.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1553,6 +1584,7 @@
 				696FEB161F3855E900069EB3 /* Resources */,
 				91298127570F92D7511A5BF3 /* [CP] Embed Pods Frameworks */,
 				0BB5BF08215E1ED600829A06 /* Embed Frameworks */,
+				9E7A14BD21AF98A300EB0739 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1810,6 +1842,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NNMintFurniture/Pods-NNMintFurniture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -1819,6 +1853,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -1843,12 +1879,14 @@
 				0B0C4E40216B599200ED0FBB /* CustomOverlay.swift in Sources */,
 				69C769241F4AD76A00376B30 /* NNValidationCodeController.swift in Sources */,
 				0B0C4F80216B66FC00ED0FBB /* lane_fun.cpp in Sources */,
+				9E7A14AF21AD587C00EB0739 /* NNWebManagerController.swift in Sources */,
 				0B0C4F60216B66FC00ED0FBB /* tinyxml2.cpp in Sources */,
 				0B0C4E25216B599200ED0FBB /* MapViewControlDemoViewController.swift in Sources */,
 				0B0C4E2F216B599200ED0FBB /* GeocodeDemoViewController.swift in Sources */,
 				0B0C4E3B216B599200ED0FBB /* CloudSearchDemoViewController.swift in Sources */,
 				0B0C4F6B216B66FC00ED0FBB /* paramPoly3.cpp in Sources */,
 				697D84191F400A04009ABC29 /* NNItemTableViewController.swift in Sources */,
+				9E2C9694219FF972007E611E /* MenuList.swift in Sources */,
 				697D843F1F430B8F009ABC29 /* NNItemCollectionViewController.swift in Sources */,
 				0B0C4E29216B599200ED0FBB /* HeatMapDemoViewController.swift in Sources */,
 				697D84351F400AF8009ABC29 /* NNSearchBar.swift in Sources */,
@@ -1865,6 +1903,7 @@
 				AAD46E1F216DFB06008C50DE /* GeometryManager.swift in Sources */,
 				0B0C4E35216B599200ED0FBB /* DistrictSearchDemoViewController.swift in Sources */,
 				0B0C4E21216B599200ED0FBB /* BMKClusterQuadtree.m in Sources */,
+				9E2C9686219FB84B007E611E /* CallCarViewController.swift in Sources */,
 				0B0C4F67216B66FC00ED0FBB /* marker.cpp in Sources */,
 				0B0C4F79216B66FC00ED0FBB /* object_fun.cpp in Sources */,
 				697D84361F400AF8009ABC29 /* NNSearchTextField.swift in Sources */,
@@ -1898,6 +1937,7 @@
 				0B0C4F53216B66FC00ED0FBB /* mapview.cpp in Sources */,
 				0B0C4F62216B66FC00ED0FBB /* line.cpp in Sources */,
 				0B0C4F55216B66FC00ED0FBB /* opendrive_object_shape_point_segment.cpp in Sources */,
+				9E7A131A21A2A57C00EB0739 /* HTTPSManager.swift in Sources */,
 				697D84321F400AF8009ABC29 /* NNSearchController.swift in Sources */,
 				0B0C4F64216B66FC00ED0FBB /* arc.cpp in Sources */,
 				0B0C4E36216B599200ED0FBB /* ClusterDemoViewController.swift in Sources */,
@@ -1940,6 +1980,7 @@
 				0B0C4E3F216B599200ED0FBB /* CustomOverlayView.swift in Sources */,
 				0B0C4E26216B599200ED0FBB /* MapViewBaseDemoViewController.swift in Sources */,
 				69C7691E1F46E48B00376B30 /* NNValidationView.swift in Sources */,
+				9E7A14A421A7CCBA00EB0739 /* NNDownloadMapController.swift in Sources */,
 				0B0C4F5B216B66FC00ED0FBB /* opendrive_object_shape_color.cpp in Sources */,
 				0B0C4F72216B66FC00ED0FBB /* Lane.cpp in Sources */,
 				0B0C4C5E216AEBA600ED0FBB /* NNBaiduMapViewController.swift in Sources */,
@@ -1947,6 +1988,7 @@
 				696FEB681F385F8400069EB3 /* NNBaseViewController.swift in Sources */,
 				696FEB661F385F6500069EB3 /* NNNavigationController.swift in Sources */,
 				0B0C4F5F216B66FC00ED0FBB /* tf_transform_datatypes.cpp in Sources */,
+				9E2C969621A018AA007E611E /* StopView.swift in Sources */,
 				0B0C4E3A216B599200ED0FBB /* OpenBaiduMapDemoViewController.swift in Sources */,
 				0B0C4F66216B66FC00ED0FBB /* odrSpiral.cpp in Sources */,
 				697D847E1F4546C1009ABC29 /* UIView+Extension.swift in Sources */,

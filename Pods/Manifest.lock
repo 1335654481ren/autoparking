@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.5.0)
+  - CocoaAsyncSocket (7.6.3)
+  - CocoaMQTT (1.1.3):
+    - CocoaAsyncSocket (~> 7.6.3)
   - Kingfisher (3.10.4)
   - MJRefresh (3.1.15.7)
   - SnapKit (3.2.0)
@@ -8,6 +11,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - CocoaAsyncSocket
+  - CocoaMQTT
   - Kingfisher
   - MJRefresh
   - SnapKit
@@ -17,6 +22,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - CocoaAsyncSocket
+    - CocoaMQTT
     - Kingfisher
     - MJRefresh
     - SnapKit
@@ -25,12 +32,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  CocoaMQTT: b506d38ad3bbe1c55a4f8ee8c9fd02c35da1a7d8
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 7b9d7672c1c0b8479744fd9aaf35e5309ff339c1
+PODFILE CHECKSUM: fc16190b5be0f0f9995c8f9a4394ff7aa49e92d5
 
 COCOAPODS: 1.5.3

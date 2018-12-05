@@ -39,7 +39,7 @@ class NNMeController: NNBaseViewController, UITableViewDelegate, UITableViewData
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension NNMeController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +47,9 @@ extension NNMeController {
         cell?.accessoryType = .disclosureIndicator
         switch indexPath.row {
         case 0:
-            cell?.textLabel?.text = "SnapKit 用法"
+            cell?.textLabel?.text = "地图下载"
+        case 1:
+            cell?.textLabel?.text = "后台管理"
         default:
             cell?.textLabel?.text = "SnapKit 用法"
         }
@@ -58,7 +60,9 @@ extension NNMeController {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            navigationController?.pushViewController(NNSnapKitController(), animated: true)
+            navigationController?.pushViewController(NNDownloadMapController(), animated: true)
+        case 1:
+            navigationController?.pushViewController(NNWebManagerController(), animated: true)
         default:
             return
         }

@@ -9,6 +9,8 @@ import UIKit
 
 class NNHomeBarController: UITabBarController{
     var BDMap_View:NNBaiduMapViewController!
+    var HDMap_View:NNHDMapViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // tabBar 颜色
@@ -17,24 +19,38 @@ class NNHomeBarController: UITabBarController{
         tabBar.backgroundImage = UIImage(named: "pfb_tabbar_background")
         
         BDMap_View = NNBaiduMapViewController()
-        //创建定时任务
-        _ = Timer.scheduledTimer(timeInterval: 3,target:self,selector:#selector(NNHomeBarController.timerFireMethod),
-                                 userInfo:nil,repeats:true)
+        BDMap_View.socket = gsocket
+        HDMap_View = NNHDMapViewController()
+        HDMap_View.socket = gsocket
 
         // 添加自控制器
         addChildControllers()
+        
+        //创建定时任务
+        _ = Timer.scheduledTimer(timeInterval: 3,target:self,selector:#selector(NNHomeBarController.timerFireMethod),
+                                 userInfo:nil,repeats:true)
     }
+    
     // 参数: The timer passes itself as the argument
     func timerFireMethod() {
-        if(self.BDMap_View.baidu_index == 1){
+        
+        if(process == true){
             self.selectedIndex = 1
-            self.BDMap_View.baidu_index = 0
+        }else{
+           self.selectedIndex = 0
         }
+        
+//        if(self.BDMap_View.baidu_index == 1 ){
+//            self.selectedIndex = 1
+//            //let route : [String] = ["1", "2", "3", "5", "8"]
+//            //self.HDMap_View.updateMapWithRoute(route: route)
+//            self.BDMap_View.baidu_index = 0
+//        }
     }
     // MARK: - 添加子控制器
     func addChildControllers() {
         addChildController(childController: self.BDMap_View, title: "Map", imageName: "pin")
-        addChildController(childController: NNHDMapViewController(), title: "HDMap", imageName: "pin")
+        addChildController(childController: self.HDMap_View, title: "HDMap", imageName: "pin")
     }
 
     // MARK: 添加子控制器
@@ -52,23 +68,16 @@ class NNHomePageController: NNBaseViewController, UIScrollViewDelegate {
     weak var contentView = UIScrollView()
     // 当前选中的按钮
     weak var selectedButton = UIButton()
-    let titlesArray = ["百度地图","高精地图"]
+    let titlesArray = ["Map","HDMap"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // 添加控制器
-        //addChildVC()
-        let vc1 = NNBaiduMapViewController()
-        addChildViewController(vc1)
-        let vc2 = NNHDMapViewController()
-        addChildViewController(vc2)
+        addChildVC()
         // 导航栏
         setupNav()
-        
         // 顶部标签栏
         setupTitlesView()
-        
         // 主要内容视图
         setupContentView()
     }
@@ -76,14 +85,12 @@ class NNHomePageController: NNBaseViewController, UIScrollViewDelegate {
     // MARK: - 设置 UI 部分
     // MARK: 添加控制器
     func addChildVC() {
-        for _ in 0..<titlesArray.count {
-            //let vc1 = NNTestViewController()
+        //for _ in 0..<titlesArray.count {
             let vc1 = NNBaiduMapViewController()
-            //let vc1  = LocationViewController()
             addChildViewController(vc1)
-            let vc2 = MapViewBaseDemoViewController()
+            let vc2 = NNHDMapViewController()
             addChildViewController(vc2)
-        }
+        //}
     }
 
     // MARK: 设置导航栏
@@ -126,12 +133,13 @@ class NNHomePageController: NNBaseViewController, UIScrollViewDelegate {
     
     // MARK: 主要内容视图
     func setupContentView() {
-        automaticallyAdjustsScrollViewInsets = false
+        //automaticallyAdjustsScrollViewInsets = false
         let contentView = UIScrollView()
         contentView.frame = view.bounds
         contentView.delegate = self
         contentView.contentSize = CGSize(width: contentView.frame.size.width * CGFloat(childViewControllers.count), height: 0)
         contentView.isPagingEnabled = true
+        contentView.isScrollEnabled = true
         view.insertSubview(contentView, at: 0)
         self.contentView = contentView
         // 添加第一个控制器的 view

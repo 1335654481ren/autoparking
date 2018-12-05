@@ -10,6 +10,10 @@ import Foundation
 
 import UIKit
 
+import Alamofire
+import SwiftyJSON
+import WebSocket
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
     //用户密码输入框
     var txtUser:UITextField!
@@ -31,7 +35,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         //获取屏幕尺寸
         let mainSize = UIScreen.main.bounds.size
         //猫头鹰头部
@@ -54,9 +58,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //登录框背景
         let vLogin =  UIView(frame:CGRect(x:15, y:200, width:mainSize.width - 30, height:160))
+        vLogin.layer.cornerRadius = 15
         vLogin.layer.borderWidth = 0.5
         vLogin.layer.borderColor = UIColor.lightGray.cgColor
-        vLogin.backgroundColor = UIColor.white
+        vLogin.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.view.addSubview(vLogin)
         
         //猫头鹰左手(圆形的)
@@ -76,7 +81,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //用户名输入框
         txtUser = UITextField(frame:CGRect(x:30, y:30, width:vLogin.frame.size.width - 60, height:44))
         txtUser.delegate = self
-        txtUser.layer.cornerRadius = 5
+        txtUser.placeholder = "输入电话号码"
+        txtUser.text = "13366470670"
+        txtUser.layer.cornerRadius = 9
         txtUser.layer.borderColor = UIColor.lightGray.cgColor
         txtUser.layer.borderWidth = 0.5
         txtUser.leftView = UIView(frame:CGRect(x:0, y:0, width:44, height:44))
@@ -91,7 +98,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //密码输入框
         txtPwd = UITextField(frame:CGRect(x:30, y:90, width:vLogin.frame.size.width - 60, height:44))
         txtPwd.delegate = self
-        txtPwd.layer.cornerRadius = 5
+        txtPwd.placeholder = "输入密码"
+        txtPwd.text = "12345678ren"
+        txtPwd.layer.cornerRadius = 9
         txtPwd.layer.borderColor = UIColor.lightGray.cgColor
         txtPwd.layer.borderWidth = 0.5
         txtPwd.isSecureTextEntry = true
@@ -104,20 +113,164 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         txtPwd.leftView!.addSubview(imgPwd)
         vLogin.addSubview(txtPwd)
         ///longin
-        let button = UIButton(type:.contactAdd)
-        button.frame = CGRect(x:UIScreen.main.bounds.width/2-60, y:370, width:120, height:30)
-        let iconImage = UIImage(named:"icon2")?.withRenderingMode(.alwaysOriginal)
-        button.setImage(iconImage, for:.normal)  //设置图标
-        button.setTitle("Login", for: UIControlState.normal)
-        button.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
-        self.view.addSubview(button)
-        button.addTarget(self, action: #selector(LoginViewController.onClick), for: UIControlEvents.touchUpInside)
+        let button1 = UIButton(frame: CGRect(x: 70, y: 370, width: 100, height: 40))
+        button1.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        button1.setTitle("登录", for: .normal)
+        button1.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
+        button1.setTitleColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), for: .highlighted)
+        button1.layer.cornerRadius = 9
+        button1.layer.masksToBounds = true
+        button1.titleLabel?.font = UIFont .systemFont(ofSize: 20.0)
+        self.view.addSubview(button1)
+        
+        let button2 = UIButton(frame: CGRect(x: 230, y: 370, width: 100, height: 40))
+        button2.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        button2.setTitle("注册", for: .normal)
+        button2.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
+        button2.setTitleColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), for: .highlighted)
+        button2.layer.cornerRadius = 9
+        button2.layer.masksToBounds = true
+        button2.titleLabel?.font = UIFont .systemFont(ofSize: 20.0)
+        self.view.addSubview(button2)
+        button1.addTarget(self, action: #selector(LoginViewController.onClickLogin), for: UIControlEvents.touchUpInside)
+        button2.addTarget(self, action: #selector(LoginViewController.onClickRegister), for: UIControlEvents.touchUpInside)
+ 
+    }
+    
+    func onClickLogin(){
 
+        var data = JSON()
+        data["phone_num"].string = txtUser.text
+        data["password"].string = txtPwd.text
+        let params = data.rawString()
+        print("onClickLogin")
+        let url = URL(string: appUrl + "api/v1/app/login")!
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Basic dXNlcjoxMjM0NQ==", forHTTPHeaderField: "Authorization")
+        request.httpBody = params?.data(using: .utf8, allowLossyConversion: false)
+        
+        Alamofire.request(request).response { response in
+
+                if let data = response.data, let _ = String(data: data, encoding: .utf8) {
+                    //print("Data: \(data)")
+                    //转成JSON对象
+                    let jsondata = JSON(response.data ?? data)
+                    print("Login code :\(jsondata["code"].int32Value)")
+                    if(jsondata["code"].int32Value == 1){
+                        let data = jsondata["data"]
+                        tokenStr = data["token"].stringValue
+                        //print("token :\(String(describing: tokenStr))")
+                        logon = true
+                        //请求未完成的订单
+                        self.request_have_process()
+                        self.view.window?.rootViewController = NNTabBarController()
+                    }else{
+                        let alertVC = UIAlertController(title: "", message: jsondata["message"].stringValue, preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alertVC.addAction(alertAction)
+                        self.present(alertVC, animated: true, completion: nil)
+                        //跳转新页面
+                        //self.present(NNSnapKitController(), animated: true, completion: nil)
+                        //self.view.window?.rootViewController = NNTabBarController()
+                    }
+                }
+        }
     }
-    func onClick(){
-        print("longin btn")
-        self.view.window?.rootViewController = NNTabBarController()
+    
+    func onClickRegister(){
+
+        var data = JSON()
+        data["phone_num"].string = txtUser.text
+        data["password"].string = txtPwd.text
+        let params = data.rawString()
+        print("onClickRegister")
+        let url = URL(string: appUrl + "api/v1/app/register")!
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Basic dXNlcjoxMjM0NQ==", forHTTPHeaderField: "Authorization")
+        request.httpBody = params?.data(using: .utf8, allowLossyConversion: false)
+
+        Alamofire.request(request).response { response in
+                
+                if let data = response.data, let _ = String(data: data, encoding: .utf8) {
+                    print("Data: \(data)")
+                    //转成JSON对象
+                    let jsondata = JSON(response.data ?? data)
+                    print("code :\(jsondata["code"].int32Value)")
+                    if(jsondata["code"].int32Value == 1){
+                        let alertVC = UIAlertController(title: "", message: "注册成功", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alertVC.addAction(alertAction)
+                        self.present(alertVC, animated: true, completion: nil)
+                    }else{
+                        let alertVC = UIAlertController(title: "", message: jsondata["message"].stringValue, preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alertVC.addAction(alertAction)
+                        self.present(alertVC, animated: true, completion: nil)
+                    }
+                }
+        }
     }
+    func request_have_process(){
+        
+        let headers: HTTPHeaders = [
+            "Connection" : "keep-alive",
+            "Authorization" : "'Bearer \(String(describing: tokenStr))",
+            "Content-Type": "application/json"
+        ]
+        Alamofire.request(appUrl + "api/v1/app/process",method:.get,headers:headers)
+            .response { response in
+                
+                if let data = response.data, let _ = String(data: data, encoding: .utf8) {
+                    //print("Data: \(data)")
+                    //转成JSON对象
+                    let jsondata = JSON(response.data ?? data)
+                    print(jsondata)
+                    print("request_have_process code :\(jsondata["code"].int32Value)")
+                    if(jsondata["code"].int32Value == 1){
+                        let alertVC = UIAlertController(title: "", message: "你有一个为完成的订单,请确认", preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alertVC.addAction(alertAction)
+                        self.present(alertVC, animated: true, completion: nil)
+                        var car = jsondata["data"]
+                        car_type = car["car_type"].stringValue
+                        license = car["license"].stringValue
+                        device_id = car["device_id"].stringValue
+                        route = car["route"].arrayObject as? Array<Int>
+                        let flowstage = car["flow_stage"].int32Value
+                        print("flowstage:\(flowstage)")
+                        if(flowstage == 3 ){
+                            print("..............")
+                            gflowstage = 3
+                            process = true
+                        }else if(flowstage == 2){
+                            process = true
+                            self.mesage_show(msg:"the car is on the way")
+                            if( gsocket.isConnected == false){
+                                print("web socket connect .......")
+                                let token = tokenStr
+                                gsocket.request.setValue(token, forHTTPHeaderField: "Authorization")
+                                gsocket.connect()
+                                NSLog("websocket connected!!!!!!")
+                            }
+                        }
+                    }else{
+                        //self.mesage_show(msg:jsondata["message"].stringValue)
+                    }
+                }
+        }
+    }
+   
+    func mesage_show(msg:String){
+        let alertVC = UIAlertController(title: "", message: msg, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertVC.addAction(alertAction)
+        self.present(alertVC, animated: true, completion: nil)
+    }
+
     //输入框获取焦点开始编辑
     func textFieldDidBeginEditing(_ textField:UITextField)
     {

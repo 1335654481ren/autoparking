@@ -221,6 +221,11 @@ class NNSnapKitController: NNBaseViewController {
             make.centerX.equalTo(whiteView)
             make.size.equalTo(CGSize(width: 100, height: 30))
         }
+        submitButton.addTarget(self,action:#selector(onclice),for:.touchUpInside)
+    }
+    
+    func onclice(){
+        dismiss(animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

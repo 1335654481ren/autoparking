@@ -2,21 +2,34 @@
 //  NNConst.swift
 //  NNMintFurniture
 //
-//  Created by 柳钟宁 on 2017/8/10.
-//  Copyright © 2017年 zhongNing. All rights reserved.
+//  Created by 任晓亮 on 2018/09/27.
+//  Copyright © 2018年 xiaoliang.Ren. All rights reserved.
 //
 
 import UIKit
-
+import WebSocket
+import SwiftyJSON
 
 // 网络请求参数 offset：从第几条开始加载；limit：每次加载多少条
 let NNGender = "gender"
 let NNGeneration = "generation"
 let NNLimit = "limit"
 let NNOffset = "offset"
-
-let NNBoHeURL = "http://api.bohejiaju.com/"
-
+var gsocket: WebSocket!
+var websocket_url = "http://42.62.85.20:443/ws/app"
+let appUrl = "http://42.62.85.20:443/"
+var tokenStr:String!
+var logon:Bool = false
+var gflowstage:Int = 0
+var process:Bool = false
+var device_id:String!
+var license:String!
+var car_type:String!
+var route: Array<Int>!
+var station_num:Int! = 0
+var station_json = [JSON]()
+var levelArr: Array<Any>? = ["宴会厅","酒店大堂","地下车库","地上车位"]
+var stationNameArry = [Int : String]()
 // 屏幕的宽
 let NNScreenWidth = UIScreen.main.bounds.size.width
 // 屏幕的高
@@ -39,3 +52,11 @@ let alpha = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
 let randomColor = UIColor.init(red:red, green:green, blue:blue , alpha: alpha)
 
 
+
+//地图标注物类型
+enum AnnotationShowType {
+    case NONE
+    case STATION
+    case PARKING
+    case CAR
+}

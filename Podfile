@@ -1,4 +1,4 @@
-platform :ios, '8.0'  
+platform :ios, '12.0'  
 use_frameworks!  
 target 'NNMintFurniture' do  
 pod 'SwiftyJSON'
@@ -8,5 +8,7 @@ pod 'Kingfisher'
 pod 'SVProgressHUD' 
 pod 'MJRefresh'
 #pod 'BaiduMapKit'
+pod 'CocoaAsyncSocket'
+pod 'CocoaMQTT'
 end 
 

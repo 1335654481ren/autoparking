@@ -22,14 +22,12 @@ class NNNavigationController: UINavigationController {
             viewController.hidesBottomBarWhenPushed = true
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "beauty_icon_back"), style: .plain, target: self, action: #selector(navigationBackClick))
         }
-        print("pushViewController")
         super.pushViewController(viewController, animated: true)
     }
     
     // MARK: - 返回按钮
     func navigationBackClick() {
         // 隐藏提示框
-        print("pop navigationBackClick")
         if SVProgressHUD.isVisible() {
             SVProgressHUD.dismiss()
         }

@@ -14,61 +14,148 @@ import Alamofire
 import SwiftyJSON
 import WebSocket
 
-public class NNHDMapViewController : UIViewController {
+class NNHDMapViewController : UIViewController {
     var lastX = 0.0, lastY = 0.0, lastZ = 60.0, lastScale = 1.0, lastRot: Double = 0.0
     var scnView: SCNView!
     var scnScene: SCNScene!
     var auto_move = 2
-
-    convenience init() {
-        self.init(nibName:nil, bundle:nil)
-        self.lastX = 0.0
-        self.lastY = 0.0
-        self.lastZ = 60.0
-        self.lastScale = 1.0
-        self.lastRot = 0.0
-        self.view = SCNView()
-        viewDidLoad()
+    var socket: WebSocket!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let camera = SCNCamera()
+        camera.fieldOfView = 90
+        camera.zFar = 2000
         
+        scnView = SCNView(frame: CGRect(x: 0, y: 0, width:self.view.frame.width, height: self.view.frame.height))
+        
+        guard let scene = SCNScene(named : "scene.scnassets/scene.scn")
+            else {
+                print("unable to get target scn")
+                return
+        }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapHandler(_:)))
+        tapGesture.numberOfTapsRequired = 2
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panHandler(_:)))
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchHandler(_:)))
+        let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(self.rotationHandler(_:)))
+        
+        scnView.scene = scene
+        scnView.allowsCameraControl = true
+        scnView.pointOfView?.camera = camera
+        scnView.pointOfView?.position.z = Float(lastZ)
+        scnView.pointOfView?.eulerAngles.x = 0
+        scnView.addGestureRecognizer(tapGesture)
+        scnView.addGestureRecognizer(panGesture)
+        scnView.addGestureRecognizer(pinchGesture)
+        scnView.addGestureRecognizer(rotationGesture)
+        scnView.pointOfView?.position.x = -500
+        scnView.pointOfView?.position.y = -550
+        
+        let carScene = SCNScene(named: "scene.scnassets/carbody_visual.dae")
+        let carNode = carScene!.rootNode.childNodes[0]
+        carNode.name = "car_body"
+        scene.rootNode.addChildNode(carNode)
+        
+        let wheelSceneFL = SCNScene(named: "scene.scnassets/wheel_visual.dae")
+        let wheelNodeFL = wheelSceneFL!.rootNode.childNodes[0]
+        wheelNodeFL.name = "car_wheel_fl"
+        scene.rootNode.addChildNode(wheelNodeFL)
+        
+        let wheelSceneFR = SCNScene(named: "scene.scnassets/wheel_visual.dae")
+        let wheelNodeFR = wheelSceneFR!.rootNode.childNodes[0]
+        wheelNodeFR.name = "car_wheel_fr"
+        scene.rootNode.addChildNode(wheelNodeFR)
+        
+        let wheelSceneRL = SCNScene(named: "scene.scnassets/wheel_visual.dae")
+        let wheelNodeRL = wheelSceneRL!.rootNode.childNodes[0]
+        wheelNodeRL.name = "car_wheel_rl"
+        scene.rootNode.addChildNode(wheelNodeRL)
+        
+        let wheelSceneRR = SCNScene(named: "scene.scnassets/wheel_visual.dae")
+        let wheelNodeRR = wheelSceneRR!.rootNode.childNodes[0]
+        wheelNodeRR.name = "car_wheel_rr"
+        scene.rootNode.addChildNode(wheelNodeRR)
+        let fileManager = FileManager.default
+        //判断沙盒的appData.plist文件是否存在,不存在则从资源目录复制一份
+        let file = NSHomeDirectory() + "/Documents/zgc.xodr"
+        let dbexits = fileManager.fileExists(atPath: file)
+        if(dbexits == true){
+            SetFile(file)
+        }else{
+            let filepath = Bundle.main.path(forResource: "zgc", ofType: "xodr")
+            SetFile(filepath)
+        }
+
+        
+        let map = GetMap()
+        
+        let map_node = SCNNode(geometry: nil)
+        map_node.name = "map"
+        
+        for lane_node in drawMap(map : map) {
+            map_node.addChildNode(lane_node)
+        }
+        let objects = GetRoadObjects()
+        for object_node in drawRoadObjects(objects: objects) {
+            map_node.addChildNode(object_node)
+        }
+        
+        scene.rootNode.addChildNode(map_node)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(NNHDMapViewController.receivedMessage(notification:)), name: NSNotification.Name(rawValue: "local"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(NNHDMapViewController.arrive_receivedMessage(notification:)), name: NSNotification.Name(rawValue: "arrive"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(NNHDMapViewController.status_receivedMessage(notification:)), name: NSNotification.Name(rawValue: "status"), object: nil)
         //创建定时任务
-        _ = Timer.scheduledTimer(timeInterval: 0.1,target:self,selector:#selector(NNHDMapViewController.timerFireMethod),
-                                 userInfo:nil,repeats:true)
+        _ = Timer.scheduledTimer(timeInterval: 3,target:self,selector:#selector(NNHDMapViewController.timerFireMethod),                                 userInfo:nil,repeats:true)
+
+        self.view.addSubview(scnView)
     }
+    
+    @objc func receivedMessage(notification: NSNotification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let content:String = userInfo["content"] as! String
+        let  recv = content.data(using: .utf8, allowLossyConversion: false)
+        let jsondata = JSON(recv)
+        //print("content:\(jsondata)")
+        self.addcarScreenAnnotation(jsondata: jsondata)
+    }
+    
+    @objc func arrive_receivedMessage(notification: NSNotification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let content:String = userInfo["content"] as! String
+        let  recv = content.data(using: .utf8, allowLossyConversion: false)
+        let jsondata = JSON(recv)
+        print(jsondata)
+        self.navigationController!.pushViewController(StopView(), animated: true)
+    }
+    
+    @objc func status_receivedMessage(notification: NSNotification) {
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let content:String = userInfo["content"] as! String
+        let  recv = content.data(using: .utf8, allowLossyConversion: false)
+        //let jsondata = JSON(recv)
+        //self.navigationController!.pushViewController(StopView(), animated: true)
+    }
+    
     // 参数: The timer passes itself as the argument
     func timerFireMethod() {
-        
-        let headers: HTTPHeaders = [
-            "Host" : "ihome.ngrok.xiaomiqiu.cn",
-            "Connection" : "keep-alive",
-            "Authorization" : "Basic dXNlcjoxMjM0NQ==",
-            "Accept": "application/json"
-        ]
-        Alamofire.request("http://ihome.ngrok.xiaomiqiu.cn/asp/car_info.asp",method:.get, parameters: ["foo": "bar"],headers:headers)
-            .response { response in
-                //print("Request: \(response.request)")
-                //print("Response: \(response.response)")
-                //print("Error: \(response.error)")
-                if let data = response.data, let _ = String(data: data, encoding: .utf8) {
-                    //print("Data: \(data)")
-                    //转成JSON对象
-                    var jsondata = JSON(response.data ?? data)
-                    //print("status :\(jsondata["status"].stringValue)")
-                    //print("car_id ::\(jsondata["array"][0]["car_id"].stringValue)")
-                    //var car_list = jsondata[]
-                    self.addcarScreenAnnotation(jsondata: jsondata)
-                }
+        if(process == true){
+            
         }
     }
     //添加固定car屏幕位置的标注
     func addcarScreenAnnotation(jsondata: JSON) {
         
-        let car_list = jsondata["array"].arrayValue
-        for car in car_list{
-            //print("\(car["car_id"].stringValue)")
-            //print("update car pos:\(Float(car["x"].doubleValue), Float(car["y"].doubleValue),Float(car["yaw"].doubleValue))")
-            updateCar(SCNVector3Make(Float(car["x"].doubleValue), Float(car["y"].doubleValue),Float(car["yaw"].doubleValue)))
+        let car:JSON! = jsondata["data"]
+        if(jsondata["type"].int32 == 1){
+            let local:JSON = car["local_location"]
+            updateCar(SCNVector3Make(Float(local["x"].doubleValue), Float(local["y"].doubleValue),Float(local["yaw"].doubleValue)))
             if(auto_move == 2){
-                set_view_point(xx: Float(car["x"].doubleValue), yy: Float(car["y"].doubleValue))
+                set_view_point(xx: Float(local["x"].doubleValue), yy: Float(local["y"].doubleValue))
             }
         }
     }
@@ -79,15 +166,7 @@ public class NNHDMapViewController : UIViewController {
     override public var prefersStatusBarHidden: Bool {
         return true
     }
-    
-    func setupView() {
-        scnView = self.view as? SCNView
-    }
-    
-    func setupScene() {
-        scnScene = SCNScene()
-        scnView.scene = scnScene
-    }
+
     @objc func tapHandler(_ gesture: UITapGestureRecognizer) {
         lastZ = 60.0
         scnView.pointOfView?.eulerAngles.x = 0.0
@@ -214,133 +293,14 @@ public class NNHDMapViewController : UIViewController {
         }
     }
     
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        setupView()
-        let camera = SCNCamera()
-        camera.fieldOfView = 90
-        camera.zFar = 2000
-        
-        guard let scene = SCNScene(named : "scene.scnassets/scene.scn")
-            else {
-                print("unable to get target scn")
-                return
-        }
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapHandler(_:)))
-        tapGesture.numberOfTapsRequired = 2
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.panHandler(_:)))
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchHandler(_:)))
-        let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(self.rotationHandler(_:)))
-        
-        if let scnView = self.view as! SCNView? {
-            scnView.scene = scene
-            scnView.allowsCameraControl = true
-            scnView.pointOfView?.camera = camera
-            scnView.pointOfView?.position.z = Float(lastZ)
-            scnView.pointOfView?.eulerAngles.x = 0
-            scnView.addGestureRecognizer(tapGesture)
-            scnView.addGestureRecognizer(panGesture)
-            scnView.addGestureRecognizer(pinchGesture)
-            scnView.addGestureRecognizer(rotationGesture)
-            scnView.pointOfView?.position.x = -500
-            scnView.pointOfView?.position.y = -550
-        }
-        
-        
-        
-        //        guard let scene = SCNScene(named : "scene.scnassets/scene.scn")
-        //            else {
-        //                print("unable to get target scn")
-        //                return
-        //        }
-        //
-        //        if let view = self.view as! SCNView? {
-        //            view.scene = scene
-        //            view.allowsCameraControl = true
-        //        }
-        
-        
-        let carScene = SCNScene(named: "scene.scnassets/carbody_visual.dae")
-        let carNode = carScene!.rootNode.childNodes[0]
-        carNode.name = "car_body"
-        scene.rootNode.addChildNode(carNode)
-        
-        let wheelSceneFL = SCNScene(named: "scene.scnassets/wheel_visual.dae")
-        let wheelNodeFL = wheelSceneFL!.rootNode.childNodes[0]
-        wheelNodeFL.name = "car_wheel_fl"
-        scene.rootNode.addChildNode(wheelNodeFL)
-        
-        let wheelSceneFR = SCNScene(named: "scene.scnassets/wheel_visual.dae")
-        let wheelNodeFR = wheelSceneFR!.rootNode.childNodes[0]
-        wheelNodeFR.name = "car_wheel_fr"
-        scene.rootNode.addChildNode(wheelNodeFR)
-        
-        let wheelSceneRL = SCNScene(named: "scene.scnassets/wheel_visual.dae")
-        let wheelNodeRL = wheelSceneRL!.rootNode.childNodes[0]
-        wheelNodeRL.name = "car_wheel_rl"
-        scene.rootNode.addChildNode(wheelNodeRL)
-        
-        let wheelSceneRR = SCNScene(named: "scene.scnassets/wheel_visual.dae")
-        let wheelNodeRR = wheelSceneRR!.rootNode.childNodes[0]
-        wheelNodeRR.name = "car_wheel_rr"
-        scene.rootNode.addChildNode(wheelNodeRR)
-        
-        //
-        //        let nodearr = daescene?.rootNode.childNodes
-        //
-        //        for child in nodearr! {
-        //            child.position.x = 0
-        //            child.eulerAngles.x = 0
-        //            child.eulerAngles.y = 0
-        //            child.eulerAngles.z = 0
-        //
-        //
-        //            scene.rootNode.addChildNode(child)
-        //
-        //        }
-        //
-        //
-        //        let daescene2 = SCNScene(named: "scene.scnassets/wheel_visual.dae")
-        //
-        //        let nodearr2 = daescene2?.rootNode.childNodes
-        //
-        //        for child in nodearr2! {
-        //            child.position.x = 0
-        //            child.eulerAngles.x = 0
-        //            child.eulerAngles.y = 0
-        //            child.eulerAngles.z = 0
-        //
-        //
-        //            scene.rootNode.addChildNode(child)
-        //
-        //        }
-        
-        let filepath = Bundle.main.path(forResource: "zgc", ofType: "xodr")
-        SetFile(filepath)
-        
-        let map = GetMap()
-        
-        let map_node = SCNNode(geometry: nil)
-        map_node.name = "map"
-        
-        for lane_node in drawMap(map : map) {
-            map_node.addChildNode(lane_node)
-        }
-        let objects = GetRoadObjects()
-        for object_node in drawRoadObjects(objects: objects) {
-            map_node.addChildNode(object_node)
-        }
-        scene.rootNode.addChildNode(map_node)
-        
-    }
     func set_view_point(xx:Float,yy:Float){
         scnView.pointOfView?.position.x = xx
         scnView.pointOfView?.position.y = yy
     }
+    
     public func updateMapWithRoute(route : [String]) {
-        if let view = self.view as! SCNView? {
-            view.scene?.rootNode.childNode(withName: "map", recursively: false)?.removeFromParentNode()
+        
+            scnView.scene?.rootNode.childNode(withName: "map", recursively: false)?.removeFromParentNode()
             let map_node = SCNNode(geometry: nil)
             map_node.name = "map"
             let map = GetMap()
@@ -355,8 +315,7 @@ public class NNHDMapViewController : UIViewController {
             for object_node in drawRoadObjects(objects: objects) {
                 map_node.addChildNode(object_node)
             }
-            view.scene?.rootNode.addChildNode(map_node)
-        }
+            scnView.scene?.rootNode.addChildNode(map_node)
     }
     
     public func drawMap(map : CMap) -> [SCNNode] {
